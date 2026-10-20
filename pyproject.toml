@@ -1,0 +1,29 @@
+[project]
+name = "ose-icse27"
+version = "0.1.0"
+description = "Mining and analysis pipeline for the OpenMRS security program study (ICSE 2027 SEIP)"
+# Plan asks >=3.11; host JupyterHub provides 3.9 — scripts are written 3.9-compatible.
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "pandas",
+    "pyarrow",
+    "PyGithub",
+    "gitpython",
+    "statsmodels",
+    "lifelines",
+    "linearmodels",
+    "matplotlib",
+    "python-dotenv",
+    "tenacity",
+]
+
+[tool.ose-icse27]
+# Panel window (ULTRAPLAN §4): 12+ months pre-treatment.
+# window_end is the single study-end setting, read by scripts/study_config.py.
+window_start = "2024-10-01"
+window_end = "2026-06-15"
+# Activity filter window (ULTRAPLAN §3.1). Defines the repo sample; kept separate
+# from window_end on purpose so extending the study does not change the sample.
+activity_start = "2025-04-01"
+activity_end = "2026-06-15"

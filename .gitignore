@@ -1,0 +1,20 @@
+# Secrets
+.env
+
+# Restricted material: never in version control
+data/private/
+
+# Raw API cache (large, regenerable)
+data/raw/*
+!data/raw/.gitkeep
+
+# Cloned repos for git-history mining
+clones/
+logs/
+
+# Python noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store

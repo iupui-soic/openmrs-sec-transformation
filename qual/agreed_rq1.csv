@@ -1,0 +1,34 @@
+id,meeting_date,action,topic (CH / NPN if they differ)
+S003,2026-03-26,Done,Tools / Other (split)
+S004,2026-03-26,Decided,Tools
+S006,2026-03-26,Decided,Tools
+S008,2026-04-02,Decided,Ownership
+S012,2026-04-02,Decided,Ownership / Other (split)
+S013,2026-04-02,Decided,Tools
+S017,2026-04-02,Decided,Tools
+S021,2026-04-09,Decided,Tools
+S022,2026-04-09,Decided,Tools
+S023,2026-04-16,Decided,Ownership / Other (split)
+S025,2026-04-16,Decided,Other / Tools (split)
+S028,2026-04-23,Decided,Tools
+S030,2026-04-23,Done,Tools
+S033,2026-04-30,Done,People
+S036,2026-04-30,Decided,People / Tools (split)
+S040,2026-05-07,Done,Tools / Other (split)
+S048,2026-05-28,Decided,Ownership
+S051,2026-05-28,Decided,Ownership
+S052,2026-05-28,Decided,Ownership / Other (split)
+S053,2026-05-28,Decided,Other
+S054,2026-05-28,Decided,People / Tools (split)
+S063,2026-06-08,Decided,Other
+S066,2026-06-11,Decided,Tools
+S067,2026-06-11,Done,Other
+S079,2026-06-18,Decided,Other
+S087,2026-06-25,Decided,Ownership
+S088,2026-06-29,Decided,Other
+S102,2026-07-09,Done,People / Tools (split)
+S112,2026-07-23,Decided,Other
+S116,2026-07-30,Decided,Tools
+S117,2026-08-06,Decided,People
+S118,2026-08-06,Decided,Tools
+S129,2026-08-20,Decided,Ownership / Tools (split)

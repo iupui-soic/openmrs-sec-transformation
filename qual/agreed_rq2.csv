@@ -1,0 +1,28 @@
+id,meeting_date,effect,topic (CH / NPN if they differ)
+S001,2026-03-26,Enabler: builds on existing,Tools
+S004,2026-03-26,Enabler: builds on existing,Tools
+S007,2026-03-26,Barrier: other,Tools / Other (split)
+S008,2026-04-02,Enabler: outside example,Ownership
+S011,2026-04-02,Barrier: no owner or no time,Ownership
+S018,2026-04-09,Barrier: no owner or no time,Tools / Other (split)
+S027,2026-04-23,Enabler: outside example,Tools
+S028,2026-04-23,Barrier: other,Tools
+S030,2026-04-23,Enabler: builds on existing,Tools
+S032,2026-04-23,Enabler: builds on existing,Tools
+S034,2026-04-30,Barrier: tool trouble,Tools / Other (split)
+S038,2026-04-30,Barrier: burden or fit,People
+S040,2026-05-07,Enabler: outside example,Tools / Other (split)
+S042,2026-05-07,Enabler: builds on existing,People
+S043,2026-05-14,Barrier: tool trouble,Tools / Other (split)
+S066,2026-06-11,Enabler: builds on existing,Tools
+S068,2026-06-11,Barrier: no owner or no time,Other / Ownership (split)
+S070,2026-06-11,Enabler: outside example,Tools
+S072,2026-06-11,Enabler: builds on existing,Tools / Other (split)
+S074,2026-06-11,Barrier: tool trouble,Tools
+S080,2026-06-18,Barrier: burden or fit,Other
+S092,2026-07-02,Enabler: outside example,Tools
+S093,2026-07-02,Barrier: tool trouble,Tools / Other (split)
+S099,2026-07-09,Enabler: outside example,Other / Tools (split)
+S101,2026-07-09,Enabler: outside example,Other
+S113,2026-07-30,Enabler: builds on existing,Tools
+S126,2026-08-13,Barrier: tool trouble,Tools
