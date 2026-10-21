@@ -35,6 +35,7 @@ Each script writes a Markdown report next to itself (`analysis/*.md`).
 | Alert data for the 44 program repos (repos, alerts, fixed, by tool) | `analysis/17_descriptives.py` | `analysis/17_descriptives.md` |
 | Share of repo-weeks with no fixes (97.5%) | `analysis/10_power_check.py` | `analysis/gate_memo.md` |
 | Jump in weekly fixed and found alerts at Jan 5, 2026; Dependabot and code-scanning fixes | `analysis/12_its_models.py` | `analysis/its_results.md` |
+| Summer (Google Summer of Code) indicator, and the jump without it | `analysis/12_its_models.py` | `analysis/its_results.md` |
 | Jump for every start date Nov 3, 2025 to Mar 2, 2026, and the June 2024 / June 2025 checks | `analysis/15_comparison_and_break_dates.py` | `analysis/15_comparison_and_break_dates.md`, `data/derived/break_grid.csv` |
 | Alerts per repo per week before and after Jan 5, program vs comparison repos; pre-trend test | `analysis/15_comparison_and_break_dates.py` | `analysis/15_comparison_and_break_dates.md` |
 | Comparison repos: age, activity, and the February 2025 spike | `analysis/17_descriptives.py` | `analysis/17_descriptives.md` |
@@ -44,6 +45,7 @@ Each script writes a Markdown report next to itself (`analysis/*.md`).
 | Figure: alerts found and fixed per repo per week | `analysis/16_figures.py` | `figures/fig_alerts_per_repo.pdf` |
 | Figure: share of alerts still open by days since found | `analysis/16_figures.py` | `figures/fig_time_to_fix.pdf` |
 | Coder agreement (kappa), RQ1 and RQ2 passage sets and counts | `qual/agreement.py` | `qual/agreement_results.md`, `qual/agreed_rq1.csv`, `qual/agreed_rq2.csv` |
+| RQ1 phases, passages per meeting, and the phase check over all 120 passages | `qual/agreement.py` | `qual/agreement_results.md` |
 
 ## Contents
 

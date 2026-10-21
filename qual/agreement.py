@@ -12,6 +12,12 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
 
+# Phases used in RQ1 (meeting dates, inclusive).
+PHASES = [("Tools and where their output goes", "2026-03-26", "2026-04-23"),
+          ("Training and named people", "2026-04-30", "2026-06-11"),
+          ("Standing rules", "2026-06-18", "2026-09-03")]
+
+
 def load(name):
     with open(HERE / name, newline="", encoding="utf-8") as f:
         return {r["id"]: r for r in csv.DictReader(f)}
@@ -77,6 +83,23 @@ def main():
     lines += ["", "Values outside the codebook choices are kept as submitted and count as disagreements: "
               + ", ".join(f"{i} {c}={r[c]}" for i in ids for c, r in [("action", npn[i])]
                           if r[c] not in ("Decided", "Done", "Neither")) + " (NPN)."]
+    # Phase check for RQ1: passages per meeting, and the same counts over all 120 passages.
+    per_meeting = Counter(passages[i]["meeting_date"] for i in ids)
+    lines += ["", "## Phase check (RQ1)", "",
+              f"Meetings with passages: {len(per_meeting)}; passages per meeting min "
+              f"{min(per_meeting.values())}, median {sorted(per_meeting.values())[len(per_meeting) // 2]}, "
+              f"max {max(per_meeting.values())}.", "",
+              "| Phase | Meetings | Passages | Per meeting | Agreed Decided/Done | Tools (both coders), RQ1 set "
+              "| Tools (both coders), all passages | Agreed Decided/Done share |",
+              "|---|---|---|---|---|---|---|---|"]
+    rq1_set = set(rq1)
+    for name, lo, hi in PHASES:
+        ph = [i for i in ids if lo <= passages[i]["meeting_date"] <= hi]
+        meetings = {passages[i]["meeting_date"] for i in ph}
+        dd = [i for i in ph if i in rq1_set]
+        tools = lambda s: sum(ch[i]["topic"] == npn[i]["topic"] == "Tools" for i in s)
+        lines.append(f"| {name} | {len(meetings)} | {len(ph)} | {len(ph) / len(meetings):.1f} | {len(dd)} "
+                     f"| {tools(dd)} of {len(dd)} | {tools(ph)} of {len(ph)} | {len(dd) / len(ph):.0%} |")
     (HERE / "agreement_results.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 

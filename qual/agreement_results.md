@@ -22,3 +22,13 @@ RQ2 set (same barrier or enabler kind): 27 passages. See agreed_rq2.csv.
 | Enabler: outside example | 7 |
 
 Values outside the codebook choices are kept as submitted and count as disagreements: S014 action=People, S018 action=People, S020 action=People (NPN).
+
+## Phase check (RQ1)
+
+Meetings with passages: 26; passages per meeting min 1, median 4, max 9.
+
+| Phase | Meetings | Passages | Per meeting | Agreed Decided/Done | Tools (both coders), RQ1 set | Tools (both coders), all passages | Agreed Decided/Done share |
+|---|---|---|---|---|---|---|---|
+| Tools and where their output goes | 5 | 28 | 5.6 | 13 | 8 of 13 | 15 of 28 | 46% |
+| Training and named people | 8 | 40 | 5.0 | 11 | 1 of 11 | 5 of 40 | 28% |
+| Standing rules | 13 | 52 | 4.0 | 9 | 2 of 9 | 10 of 52 | 17% |

@@ -36,6 +36,13 @@ Mean weekly rate pre → post: created 5.3 → 32.7 (×6.1), fixed 3.1 → 16.4 
 | slope change after break | 5.22 | 0.4 | trend shift (×/yr) |
 | pre-break trend | 2.03 | 0.0119 | baseline drift (×/yr) |
 
+## Summer (GSoC) indicator
+
+| outcome | GSoC term (×) | p | jump with GSoC (×) | p | jump without GSoC (×) | p |
+|---|---|---|---|---|---|---|
+| fixed | 0.84 | 0.64 | 3.84 | 0.017 | 4.31 | 0.0056 |
+| created | 1.02 | 0.93 | 4.85 | 0.00034 | 4.79 | 0.00021 |
+
 ## Break-date sensitivity (outcome = alerts fixed/wk)
 
 The break must be pinned by the qualitative timeline (R5) — reported here for transparency, NOT chosen to maximize significance. The remediation discontinuity is sharpest in **early 2026** (≈1 month after the Dec-2025 audit → audit-to-remediation lag), with a strong secular pre-trend.

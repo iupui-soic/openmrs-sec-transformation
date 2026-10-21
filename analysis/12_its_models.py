@@ -131,6 +131,25 @@ def main():
                   "| pre-break trend | %.2f | %.3g | baseline drift (×/yr) |" %
                   (np.exp(p["t"]), pv["t"]), ""]
 
+    # Seasonal control: the GSoC indicator itself, and the jump without it.
+    lines += ["## Summer (GSoC) indicator", "",
+              "| outcome | GSoC term (×) | p | jump with GSoC (×) | p | jump without GSoC (×) | p |",
+              "|---|---|---|---|---|---|---|"]
+    for y in ["fixed", "created"]:
+        res = {}
+        for use_gsoc in (True, False):
+            d = df.copy()
+            d["t"] = d["time"] / 52.0
+            d["tp"] = d["time_post"] / 52.0
+            cols = ["t", "post", "tp"] + (["gsoc"] if use_gsoc else [])
+            res[use_gsoc] = sm.NegativeBinomial(d[y], sm.add_constant(d[cols])).fit(
+                disp=0, maxiter=300, cov_type="HAC", cov_kwds={"maxlags": 4})
+        g, n = res[True], res[False]
+        lines.append("| %s | %.2f | %.2g | %.2f | %.2g | %.2f | %.2g |" % (
+            y, np.exp(g.params["gsoc"]), g.pvalues["gsoc"], np.exp(g.params["post"]),
+            g.pvalues["post"], np.exp(n.params["post"]), n.pvalues["post"]))
+    lines.append("")
+
     lines += ["## Break-date sensitivity (outcome = alerts fixed/wk)", "",
               "The break must be pinned by the qualitative timeline (R5) — reported here for "
               "transparency, NOT chosen to maximize significance. The remediation "
